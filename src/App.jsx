@@ -1,8 +1,10 @@
 import { useState } from "react";
+
+import Complements from "./components/Complements";
+import Intensification from "./components/Intensification";
 import Part1 from "./components/Part1";
 import Part2 from "./components/Part2";
 import Part3 from "./components/Part3";
-import Intensification from "./components/Intensification";
 import Progression from "./components/Progression";
 
 const pages = [
@@ -11,6 +13,7 @@ const pages = [
   { id: "p3", label: "J5", icon: "🏋️", desc: "Full Body" },
   { id: "int", label: "Techniques", icon: "⚡", desc: "Intensification" },
   { id: "prog", label: "Progression", icon: "📈", desc: "6 Semaines" },
+  { id: "comp", label: "Compléments", icon: "💊", desc: "Nutrition" },
 ];
 
 export default function App() {
@@ -44,6 +47,7 @@ export default function App() {
         {activePage === "p3" && <Part3 />}
         {activePage === "int" && <Intensification />}
         {activePage === "prog" && <Progression />}
+        {activePage === "comp" && <Complements />}
       </div>
     </div>
   );
